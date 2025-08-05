@@ -2,18 +2,21 @@ package Patterns;
 
 import java.util.Scanner;
 
-public class Pattern8 {
+public class Pattern11 {
     public static void main(String args[]) {
         System.out.println("Enter size of elements :");
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
-        /// for printing top half
+        int count = 0;
         for(int i=0;i<size;i++){
-            for(int j=0;j<i;j++){
-                System.out.print(" ");
-            }
-            for(int k=i;k<size;k++){
-                System.out.print("* ");
+            if(i%2==0){
+                count = 1;
+            }else{count = 0;}
+            for(int j=0;j<=i;j++){
+                System.out.print(count+" ");
+                if(j%2==0){
+                    count = 1;
+                }else{count = 0;}
             }
             System.out.println();
         }
