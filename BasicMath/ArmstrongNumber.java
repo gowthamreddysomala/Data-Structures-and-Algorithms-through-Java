@@ -18,7 +18,30 @@ public class ArmstrongNumber {
             }
             System.out.println((int)ans);
         }
+    static boolean armstrongNumber(int n) {
+        int count =0;
+        int counter = n;
+        while(counter>0){
+            counter = counter/10;
+            count++;
+        }
+        int rem = 0;
+        double ans  =0;
+        int cnt = n;
+        while(cnt > 0){
+            rem = cnt % 10;
+            ans = Math.pow(rem ,count) + ans;
+            cnt = cnt / 10;
+        }
+        int ls = (int)ans;
+        System.out.println(ls);
+        if(ls == n){
+            return true;
+        }
+        return false;
+    }
         public static void main(String ar[]){
+            System.out.println(armstrongNumber(153));
             extract(153);
         }
 }
