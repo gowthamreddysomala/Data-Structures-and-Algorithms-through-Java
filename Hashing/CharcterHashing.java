@@ -34,11 +34,24 @@ public class CharcterHashing {
                b = b -a = 1 // store b at 1 th index .. do the same for extraction.
      */
 
+    // any ways no spaces now
+    int[] hash = new int[26];
+    public int charadvhashing(String name , char alpha){
+        name = name.toLowerCase();
+        int k = alpha - 'a';
+        for(int i=0;i<name.length();i++){
+            int j = name.charAt(i) - 'a';
+            hash[j]  = hash[j] + 1;
+        }
+        return hash[k];
+    }
+
     public static void main(String args[]){
         CharcterHashing charcterHashing = new CharcterHashing();
         // any String is converted to Lower case for case in-sentivitity
-        String name = "Gowtham Reddy";
-        char chartofind = ' ';
-        System.out.println("Char count in String: "+ charcterHashing.bruteforce(name ,chartofind));
+        String name = "Gowtham";
+        char chartofind = 'e';
+        //  System.out.println("Char count in String: "+ charcterHashing.bruteforce(name ,chartofind));
+        System.out.println("Char Count : "+ charcterHashing.charadvhashing(name , chartofind));
     }
 }
