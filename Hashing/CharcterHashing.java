@@ -27,6 +27,11 @@ public class CharcterHashing {
                             :  97 - 96 = 1
                                  so if one exist thet is stored on 1 th index of array .
                                  so the array size for only small case will be from 0 - 26  .. EASY ..
+
+
+               Tip : so you can store based on a th index = a - a = 0 // store a at 0 th index
+
+               b = b -a = 1 // store b at 1 th index .. do the same for extraction.
      */
 
     public static void main(String args[]){
