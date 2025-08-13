@@ -49,7 +49,7 @@ public class CharcterHashing {
     public static void main(String args[]){
         CharcterHashing charcterHashing = new CharcterHashing();
         // any String is converted to Lower case for case in-sentivitity
-        String name = "Gowtham";
+        String name = "Gowthamreddy";
         char chartofind = 'e';
         //  System.out.println("Char count in String: "+ charcterHashing.bruteforce(name ,chartofind));
         System.out.println("Char Count : "+ charcterHashing.charadvhashing(name , chartofind));
