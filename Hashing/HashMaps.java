@@ -19,6 +19,7 @@ public class HashMaps {
     }
     // get the count of elements present from the precomputed hash
     public int getthecount(int number){
+        System.out.println(hash);
         return hash.get(number);
     }
 
@@ -37,6 +38,7 @@ public class HashMaps {
 
     // for finding the count of characters in the String
     public int getthecountofchar(char find){
+        System.out.println(charhash);
         return charhash.get(find);
     }
 
