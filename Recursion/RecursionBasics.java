@@ -1,64 +1,56 @@
 package Recursion;
-
+// from striver
 public class RecursionBasics {
-     int count = 1;
-    public  boolean coder(int k ) {
-    // printing name n number of times
-        if(k ==0){
-            return false;
-        }
-        System.out.println("Gowtham Reddy");
-        k--;
-        return coder(k);
-    }
-    //printing numbers 0 to until n
-    public static void print(int k){
-    if(k<=1){
-        return ;
-    }
-    k--;
-        print(k);
-        System.out.print(k+" ");
-    }
-    public static void printrev(int k){
-        if(k==0){
+    // print name 5 Times
+    public static void printname(int n){
+        if(n>=5){
             return;
         }
-        System.out.print(k+" ");
-        k--;
-        printrev(k);
+        System.out.println("Gowtham Reddy");
+        printname(++n);
     }
-    //sum of first n numbers using recursion
-   int noc = 0;
-    public int sumofn(int k){
-        if(k==0){
-            return noc;
+    // print linearly from 1 to n
+    public static void printn(int n,int num){
+        if(num >= n){
+            return;
         }
-        noc = noc + k;
-        k--;
-        return sumofn(k);
+        System.out.print(num+" ");
+        printn(n,++num);
     }
-    //factorial of N numbers
-    int fact = 1;
-    public int factorialofN(int n){
-        if(n ==0){
-            return fact;
+    /// print from n to 1
+    public static void nto1(int n){
+        if(n<=0){
+            return;
         }
-        fact = fact * n;
-        n--;
-        return factorialofN(n);
+        System.out.print(n+" ");
+        nto1(--n);
     }
-    // check if String is palindrome of not
-    boolean valid = false;
-    public boolean palindrome(String name){
-        return false;
+    // print linearly from 1 to n but by backtracking
+    public static void backtrck1ton(int n){
+        if(n<=1 ){
+            return;
+        }
+        backtrck1ton(--n);
+        System.out.print(n + " ");
+    }
+    // printing 1 to n by backtracking
+    public static void backtrackingnto1(int n,int c){
+        if(c>=n){
+            return;
+        }
+        backtrackingnto1(n,++c);
+        System.out.print(c+" ");
     }
     public static void main(String args[]){
-       RecursionBasics recursionBasics = new RecursionBasics();
-       // System.out.println( recursionBasics.coder(6));
-         // print(33);
-        //printrev(43);
-       // System.out.println(recursionBasics.sumofn(10));
-        System.out.println(recursionBasics.factorialofN(10));
+        printname(0);
+        System.out.println();
+        printn(10,1);
+        System.out.println();
+        nto1(10);
+        System.out.println();
+        backtrck1ton(19);
+        System.out.println(
+        );
+        backtrackingnto1(132,0);
     }
 }
