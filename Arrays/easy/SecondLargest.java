@@ -16,7 +16,7 @@ public class SecondLargest {
     }
 
     public static void SecondLargest(int[] arr){
-        int max = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE ;
         int length = arr.length;
         int first_high = largest(arr);
         for(int i =0;i<length;i++){
