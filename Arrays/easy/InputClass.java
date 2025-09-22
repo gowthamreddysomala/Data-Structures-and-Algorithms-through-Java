@@ -11,4 +11,11 @@ public class InputClass {
         }
         return arr;
     }
+    public static void print(int[] arr){
+        int k = arr.length;
+        for(int i=0;i<k;i++){
+            System.out.print(arr[i] +" ");
+        }
+        System.out.println();
+    }
 }
