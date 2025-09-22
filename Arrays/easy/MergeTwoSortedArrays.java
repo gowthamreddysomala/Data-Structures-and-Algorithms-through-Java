@@ -1,7 +1,5 @@
 package Arrays.easy;
 
-import java.sql.SQLOutput;
-
 public class MergeTwoSortedArrays {
     // to sort the arrays using merge sort
     public static void sort(int[] arr){
