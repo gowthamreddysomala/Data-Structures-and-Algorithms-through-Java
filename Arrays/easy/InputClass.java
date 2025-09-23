@@ -56,4 +56,8 @@ public class InputClass {
             r++;m++;
         }
     }
+    public static int[] getsmallarr(){
+        int[] arr = {3,0,4,2,12,43,2,-23,-34,2,-34,-324,-2,-23,-53,523,0,3,2,0};
+        return arr;
+    }
 }
