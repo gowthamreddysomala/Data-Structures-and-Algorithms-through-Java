@@ -3,38 +3,31 @@ package practice;
 import java.util.Random;
 
 public class Test {
+        public static void merge(int[] arr1,int len1 , int[] arr2, int len2){
+            int[] temp = new int[len1+len2];
+            int i=0,j=0,t=0;
+            while(i<len1 && j<len2){
+                if(arr1[i]<arr2[j]){
+                    temp[t] = arr1[i];
+                    i++;
+                }else{
+                    temp[t] = arr2[j];
+                    j++;
+                }
+                t++;
+            }
+            while(i<len1){
+                temp[t] = arr1[i];
+                i++;
+                t++;
+            }
+            while(j<len2){
+                temp[t] = arr2[j];
+                j++;t++;
+            }
+            print(temp);
 
-    public static void mergesort(int[] arr, int start , int end , int[]temp){
-       if(start<end){
-           int mid = start + (end - start)/2;
-           mergesort(arr,start,mid,temp);
-           mergesort(arr,mid+1,end,temp);
-           sort(arr,start,mid,end,temp);
-       }
-    }
-    public static void sort(int[] arr,int start ,int mid ,int end , int[] temp){
-        int i = start;
-        int j = mid+1;
-        int k = start;
-
-        while(i<=mid && j<=end){
-            if(arr[i]<arr[j]){
-                temp[k++] = arr[i++];
-            }
-            else{
-                temp[k++] = arr[j++];
-            }
-            while(i<mid){
-                temp[k++] = arr[i++];
-            }
-            while(j<end){
-                temp[k++] = arr[j++];
-            }
-            for(int m=start;m<=end;m++){
-                arr[m] = temp[m];
-            }
         }
-    }
 
         public static void print(int[] arr){
         for(int i=0;i<arr.length;i++){
@@ -43,16 +36,8 @@ public class Test {
         }
 
     public static void main(String[] args){
-        int[] arr = new int[10];
-        int[] temp = new int[arr.length];
-        Random rand = new Random();
-        for(int i=0;i<arr.length;i++){
-            arr[i] = rand.nextInt(3000);
-            temp[i] = arr[i];
-        }
-        print(arr);
-        System.out.println();
-    mergesort(arr,0,arr.length-1,temp);
-    print(arr);
+        int[] arr1 = {1,4,6,0,0,0};
+        int[] arr2 = {2,3,5};
+        merge(arr1,3,arr2,3);
     }
 }
