@@ -1,6 +1,5 @@
 package Sorting;
 
-import javax.swing.*;
 
 public class DutchNationalFlagAlgo {
     public static void better(int[] arr){

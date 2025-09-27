@@ -23,6 +23,7 @@ public class RemoveDuplicatesfromSortedArray {
         }
          return temp;
     }
+
     public static void main(String[] args){
         int[] arr = InputClass.getinput(1000);
         InputClass.sort(arr);
