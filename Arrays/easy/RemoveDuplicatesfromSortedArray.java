@@ -24,12 +24,23 @@ public class RemoveDuplicatesfromSortedArray {
          return temp;
     }
 
+    public static int[] better(int[] arr){
+     int len = arr.length;
+     int pointer = 1;
+     for(int i=1;i<len;i++){
+         if(arr[i]!=arr[i-1]){
+             arr[pointer++] = arr[i];
+         }
+     }
+        return arr;
+    }
     public static void main(String[] args){
-        int[] arr = InputClass.getinput(1000);
+        int[] arr = {3,2,5,5,3,2,1};
         InputClass.sort(arr);
         InputClass.print(arr);
         System.out.println("After Removing Duplicates :");
-       int[] temp = removeduplicates(arr);
+        int[] temp = better(arr);
+      // int[] temp = removeduplicates(arr);
         InputClass.print(temp);
     }
 }

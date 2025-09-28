@@ -17,8 +17,8 @@ public class RotateArraybynsteps {
         int n = arr.length;
         int step = steps % n;
         System.out.println(step);
-        reverse(arr,0,step-1);
-        reverse(arr,step,n-1);
+        reverse(arr,0,step);
+        reverse(arr,step+1,n-1);
         reverse(arr,0,n-1);
     }
     public static void reverse(int[] arr, int start , int end){
@@ -31,11 +31,11 @@ public class RotateArraybynsteps {
         }
     }
     public static void main(String[] args){
-        int[] arr = InputClass.getinput(10);
+        int[] arr = {-1,-100,3,99};
         System.out.println("Before Rotation : ");
         InputClass.print(arr);
        // bruteforce(arr,3);
-        optimal(arr,13);
+        optimal(arr,2);
         System.out.println("After Rotation : ");
         InputClass.print(arr);
     }
