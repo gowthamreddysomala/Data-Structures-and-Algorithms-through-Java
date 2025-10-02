@@ -13,9 +13,9 @@ public class RotateArraybynsteps {
             arr[k] = temp;
         }
     }
-    public static void optimal(int[] arr,int steps) {
+    public static void optimal(int[] arr,int step) {
         int n = arr.length;
-        int step = steps % n;
+        step = step % n;
         System.out.println(step);
         reverse(arr,0,step);
         reverse(arr,step+1,n-1);
