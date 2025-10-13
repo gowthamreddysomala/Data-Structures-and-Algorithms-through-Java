@@ -40,12 +40,16 @@ public class SlidingWindow {
         return max/size;
     }
     public static int patternsanagram(String string,String pattern) {
-        int max = 0;
-        StringBuilder sb = new StringBuilder(pattern);
-        sb.reverse();
-        String k = sb.toString();
-        System.out.println(k);
-        return max;
+     int max = 0;
+     StringBuffer stringBuffer = new StringBuffer(pattern);
+     stringBuffer.reverse();
+     String k = stringBuffer.toString();
+     int patlen = pattern.length();
+     // initial len cal;
+     for(int i=0;i<patlen;i++){
+
+     }
+        return -1;
     }
     public static void main(String[] args){
         int[] arr = {1,2,3,4,5,6};
