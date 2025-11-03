@@ -20,7 +20,7 @@ public class BinarySearchAlgo {
         int end = length -1;
             while(start<=end){
             int mid = start + (end - start) /2;
-            if(arr[mid]==value){
+                if(arr[mid]==value){
                 return mid;
             }
             if(arr[mid]<value){
